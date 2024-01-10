@@ -5,9 +5,9 @@
  * @tree: Pointer to the root node of the tree to measure.
  *
  * Description: This function determines the height of a binary tree,
- * 				which is the distance from the root node to the furthest leaf node.
- * 				The function considers the height of a leaf node (a node with no children)
- * 				as 0. It returns 0 for NULL nodes as they do not contribute to the height.
+ *			which is the distance from the root node to the furthest leaf node.
+ *			The function considers the height of a leaf node (a node with no children)
+ *			as 0. It returns 0 for NULL nodes as they do not contribute to the height.
  *
  * Return: The height of the tree.
  */
