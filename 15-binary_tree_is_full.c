@@ -4,10 +4,14 @@
  * binary_tree_is_full - Checks if a binary tree is full.
  * @tree: Pointer to the root node of the tree to check.
  *
- * Description: A binary tree is full if every node has either zero or two children.
- *              This function checks if the tree is full by recursively verifying each node.
- *              If a node has both left and right children, the function continues to check
- *              recursively. If a node has only one child or the tree is NULL, it's not a full tree.
+ * Description: A binary tree is full if every node has either
+ *				zero or two children.
+ *              This function checks if the tree is full by
+ *				recursively verifying each node.
+ *              If a node has both left and right children,
+ *				the function continues to check
+ *              recursively. If a node has only one child or the
+ *				tree is NULL, it's not a full tree.
  *
  * Return: 1 if the tree is full, 0 if it's not or the tree is NULL.
  */

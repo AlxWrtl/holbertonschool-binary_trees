@@ -4,10 +4,14 @@
  * binary_tree_sibling - Finds the sibling of a given node in a binary tree.
  * @node: Pointer to the node to find the sibling of.
  *
- * Description: This function returns a pointer to the sibling of a given node.
- *              A sibling is defined as the other child of the same parent. The function checks
- *              if the node exists and has a parent. If the node is the left child, the function
- *              returns the right child, and vice versa. If the node has no parent or no sibling,
+ * Description: This function returns a pointer to the
+ *				sibling of a given node.
+ *              A sibling is defined as the other child of the same
+ *				parent. The function checks
+ *              if the node exists and has a parent. If the node is
+ *				the left child, the function
+ *              returns the right child, and vice versa. If the
+ *				node has no parent or no sibling,
  *              the function returns NULL.
  *
  * Return: Pointer to the sibling node, or NULL if there is no sibling.

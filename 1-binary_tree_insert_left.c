@@ -5,10 +5,14 @@
  * @parent: Pointer to the node to insert the left child into.
  * @value: The value to insert into the tree.
  *
- * Description: This function creates a new node with the specified value
- *              and inserts it as the left child of the provided parent node. If the parent
- *              already has a left child, the new node takes its place and the old left child
- *              becomes the left child of the new node. The function handles memory allocation
+ * Description: This function creates a new node with the
+ *				specified value
+ *              and inserts it as the left child of the provided
+ *				parent node. If the parent
+ *              already has a left child, the new node takes its
+ *				place and the old left child
+ *              becomes the left child of the new node.
+ *				The function handles memory allocation
  *              and updates parent-child relationships accordingly.
  *
  * Return: A pointer to the new node, or NULL on failure or if parent is NULL.
