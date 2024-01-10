@@ -1,24 +1,34 @@
 #include "binary_trees.h"
 
 /**
- * depth - Calculates the depth of the leftmost node in a binary tree.
- * @node: Pointer to the node from which the depth is measured.
+ * tree_height - Calculates the height of a binary tree.
+ * @tree: Pointer to the root node of the binary tree.
  *
- * Description: Computes the depth of the leftmost node in a binary tree,
- *              incrementing a depth counter while traversing the left subtree.
+ * Description: Computes the height of a binary tree. The height is the number
+ *              of edges on the longest path from the root to a leaf node. It
+ *              recursively calculates the height of the left and right subtrees
+ *              and returns the greater of the two, incremented by one to account
+ *              for the current node. A NULL tree is considered to have a height
+ *              of 0.
  *
- * Return: The depth of the tree as an integer.
+ * Return: The height of the binary tree as a size_t. Returns 0 for a NULL tree.
  */
-int depth(const binary_tree_t *node)
+size_t tree_height(const binary_tree_t *tree)
 {
-	int d = 0;
+	size_t left_height = 0, right_height = 0;
 
-	while (node != NULL)
-	{
-		d++;
-		node = node->left;
-	}
-	return (d);
+	/* Check if the tree is NULL, return 0 if true */
+	if (tree == NULL)
+		return (0);
+
+	/* Recursively calculate the height of the left subtree */
+	left_height = tree_height(tree->left);
+
+	/* Recursively calculate the height of the right subtree */
+	right_height = tree_height(tree->right);
+
+	/* Return the greater of the two heights, incremented by one */
+	return ((left_height > right_height ? left_height : right_height) + 1);
 }
 
 /**
@@ -59,7 +69,7 @@ int is_perfect_rec(const binary_tree_t *tree, int d, int level)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int d = depth(tree);
+	int d = tree_height(tree);
 
 	return (is_perfect_rec(tree, d, 0));
 }
