@@ -44,7 +44,7 @@ int is_perfect_rec(const binary_tree_t *tree, int d, int level)
 
 	/* Check for leaf node and compare its level with depth */
 	if (tree->left == NULL && tree->right == NULL)
-		return ((d == level + 1));
+		return (d == level);
 
 	/* Check for missing children */
 	if (tree->left == NULL || tree->right == NULL)
