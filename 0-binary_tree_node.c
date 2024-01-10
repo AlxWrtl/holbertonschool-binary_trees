@@ -5,7 +5,7 @@
  * @parent: Pointer to the parent node of the node to create.
  * @value: The integer value to store in the new node.
  *
- * Descriptions: This function performs memory allocation
+ * Description: This function performs memory allocation
  *				for a new node in a
  *              binary tree and sets its value. The new node's
  *				parent is assigned, and its
