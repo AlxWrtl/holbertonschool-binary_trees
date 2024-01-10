@@ -9,16 +9,20 @@
  *
  * Return: The depth of the tree as an integer.
  */
-int depth(const binary_tree_t *node)
+size_t tree_height(const binary_tree_t *tree)
 {
-	int d = 0;
+	size_t left_height = 0, right_height = 0;
 
-	while (node != NULL)
-	{
-		d++;
-		node = node->left;
-	}
-	return (d);
+	/* Handle NULL tree case */
+	if (tree == NULL)
+		return (0);
+
+	/* Calculate height of left and right subtrees */
+	left_height = tree_height(tree->left);
+	right_height = tree_height(tree->right);
+
+	/* Return the greater height plus one */
+	return ((left_height > right_height ? left_height : right_height) + 1);
 }
 
 /**
@@ -59,7 +63,7 @@ int is_perfect_rec(const binary_tree_t *tree, int d, int level)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int d = depth(tree);
+	int d = tree_height(tree);
 
 	return (is_perfect_rec(tree, d, 0));
 }
